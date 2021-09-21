@@ -1,0 +1,1559 @@
+/*
+Theme Name: webninteentwenty
+Theme URI: https://wordpress.org/themes/webninteentwenty/
+Author: Maheen
+Author URI: https://wordpress.org/
+Description: Our default theme for 2020 is designed to take full advantage of the flexibility of the block editor. Organizations and businesses have the ability to create dynamic landing pages with endless layouts using the group and column blocks. The centered content column and fine-tuned typography also makes it perfect for traditional blogs. Complete editor styles give you a good idea of what your content will look like, even before you publish. You can give your site a personal touch by changing the background colors and the accent color in the Customizer. The colors of all elements on your site are automatically calculated based on the colors you pick, ensuring a high, accessible color contrast for your visitors.
+Tags: blog, one-column, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, block-styles, wide-blocks, accessibility-ready
+Version: 1.3
+Requires at least: 5.0
+Tested up to: 5.4
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: webninteentwenty
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html {
+    margin-top: 0 !important;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* when using animations use this to avoid scrollbars!
+body::-webkit-scrollbar {
+display: none;
+} */
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url(../webninteentwenty/assets/fonts/Gilroy-ExtraBold.otf);
+    src: url(../webninteentwenty/assets/fonts/Gilroy-Light.otf);
+}
+
+
+/*=======================Common-CSS===================== */
+
+
+/* .container {
+max-width: 1016px;
+} */
+
+.container-fluid {
+    max-width: 1950px;
+}
+
+.container {
+    max-width: 1516px;
+}
+
+a:hover {
+    color: #1a6ebf;
+    text-decoration: initial;
+}
+
+p {
+    margin-bottom: initial;
+}
+
+input:focus-visible {
+    outline: initial;
+}
+
+h1,
+h3,
+h4 {
+    margin-bottom: initial;
+}
+
+.heading {
+    font-family: 'Gilroy';
+    font-size: 50px;
+    font-weight: 800;
+    color: #FFFFFF;
+}
+
+.text {
+    font-size: 24px;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
+.sm-text {
+    font-size: 21px;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.span-arrow {
+    margin-left: 6px;
+    height: 26px;
+    width: 26px;
+    object-fit: contain;
+}
+
+.button-style {
+    font-size: 24px;
+    color: #fff;
+    font-weight: 700;
+    background-color: #23CE6B;
+    box-shadow: 0px 8px 8px #23CE6B80;
+    border-radius: 35px;
+    padding: 22px 50px;
+    transition: ease-in-out .3s;
+    outline: initial;
+    cursor: pointer;
+    margin-top: 62px;
+}
+
+
+/* menu toggle burger bar */
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 35px;
+    height: 2px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-5px, -3px);
+}
+
+
+/*===================== Header-CSS ==================== */
+
+#header {
+    overflow: hidden;
+    background-size: cover;
+    position: relative;
+    z-index: 33;
+    background-image: url(../webninteentwenty/assets/images/bg-banner.png);
+    background-repeat: no-repeat;
+    top: 0px;
+}
+
+#header form:focus-visible {
+    outline: none;
+}
+
+#header input:focus-visible {
+    outline: none;
+}
+
+#header .btn-design {
+    font-family: 'Gilroy';
+    font-weight: 800;
+    font-size: 14px;
+    color: #FFFFFF;
+    border-radius: 5px;
+    background-color: #23CE6B;
+    padding: 10px 42px;
+}
+
+#header a:hover {
+    text-decoration: none;
+}
+
+#header ul {
+    display: flex;
+    align-items: center;
+}
+
+#banner .heading {
+    width: 100%;
+    max-width: 508px;
+}
+
+#header .text {
+    width: 100%;
+    max-width: 467px;
+    padding: 10px 0px 0px;
+}
+
+
+/* #header form {width: 100%;position: relative;max-width: 846px;margin: auto;} */
+
+#header li {
+    list-style-type: none;
+}
+
+#header .label1-img {
+    display: none;
+}
+
+#header .mystyle form input {
+    display: block;
+    transition: all 1s;
+}
+
+#header .mystyle form .fa {
+    background: #005EB8;
+    color: white;
+    transition: all 1s;
+}
+
+#header .navbar-collapse {
+    justify-content: flex-end;
+}
+
+#header .navbar-brand h1 {
+    font-size: 31px;
+    color: #FFFFFF;
+    font-family: 'Gilroy';
+    font-weight: 800;
+}
+
+#header .hide-logo {
+    display: none;
+}
+
+#header .nav-design {
+    padding: 25px 0px 20px;
+    width: 100%;
+    top: 0;
+    z-index: 9999;
+    position: relative;
+}
+
+#header li {
+    padding-right: 33px;
+}
+
+#header .ul {
+    align-items: center;
+}
+
+#header a {
+    font-family: 'Gilroy';
+    font-size: 16px;
+    font-weight: 300;
+    color: #FFFFFF;
+    padding: 0px 15px;
+}
+
+#header .dropdown-header {
+    font-family: "Archivo";
+    color: #958876;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+#header .dropdown-item {
+    font-family: "Archivo";
+    color: #312f2b;
+    padding: 5px 24px;
+}
+
+#header .border-bottom {
+    border-bottom: 2px solid #fff !important;
+}
+
+
+/* ======================== Banner CSS ======================== */
+
+#banner {
+    background-color: #08083d;
+}
+
+#banner .header-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 91px 20px 194px;
+}
+
+#banner .label-img {
+    padding: 77px 0px;
+    width: 100%;
+}
+
+#banner .label1-img {
+    display: none;
+}
+
+#banner .content {
+    padding-right: 100px;
+}
+
+#banner .span-design,
+#banner .span1-design,
+#banner .span2-design,
+#banner .span3-design {
+    font-family: 'Gilroy';
+    font-size: 50px;
+    font-weight: 800;
+    width: 100%;
+    max-width: fit-content;
+    color: #fff;
+    display: none;
+}
+
+#banner .span-design.active,
+#banner .span1-design.active,
+#banner .span2-design.active,
+#banner .span3-design.active {
+    display: block;
+}
+
+#banner .span-design {
+    background-color: #6184D8;
+    padding: 0px 3px;
+}
+
+#banner .span1-design {
+    background-color: #316EFF;
+    padding: 0px 22px;
+}
+
+#banner .span2-design {
+    background-color: #316EFF;
+    padding: 0px 15px;
+}
+
+#banner .span2-design {
+    background-color: #E86F3A;
+    padding: 0px 15px;
+}
+
+#banner .span3-design {
+    padding: 0px 4px;
+    background-color: #FFFFFF;
+    color: #08083D !important;
+}
+
+#banner .button-style:hover {
+    transition: ease-out .3s;
+    margin-top: 45px;
+}
+
+#banner .button-style {
+    position: absolute;
+}
+
+
+/* ==============================  Dolor1-CSS ==================================== */
+
+#dolor1 .d-flex {
+    justify-content: center;
+}
+
+#dolor1 {
+    display: none;
+}
+
+#dolor1 .box-txt {
+    color: #08083D;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 10px 0px;
+    line-height: 27px;
+    width: 100%;
+    max-width: 170px;
+    margin: auto;
+}
+
+#dolor1 .b-txt {
+    font-weight: 700;
+}
+
+#dolor1 .box-img {
+    width: 100%;
+    max-width: 89px;
+    height: 67px;
+    object-fit: contain;
+}
+
+#dolor1 .box {
+    width: 100%;
+    text-align: center;
+    max-width: 240px;
+    padding: 9px 0px;
+}
+
+
+/* ==============================  Dolor-CSS ==================================== */
+
+#dolor .d-flex {
+    align-items: center;
+    padding: 0px 0px 14px;
+}
+
+#dolor .text {
+    font-family: 'Roboto';
+    font-weight: 700;
+    color: #08083D;
+}
+
+#dolor .check-img {
+    margin-right: 38px;
+    object-fit: contain;
+    width: 25px;
+    height: 19px;
+}
+
+#dolor .heading {
+    color: #08083D;
+    text-align: center;
+}
+
+#dolor .dolor-info {
+    width: 100%;
+    max-width: 679.75px;
+    margin: auto;
+    padding: 41px 0px 0px;
+}
+
+#dolor {
+    padding: 57px 0px;
+}
+
+
+/* ==============================  Projects-CSS ==================================== */
+
+#projects {
+    background-color: #08083D;
+    padding: 55px 0px 10px;
+}
+
+#projects .heading {
+    text-align: center;
+    width: 100%;
+    max-width: 1210px;
+    margin: auto;
+}
+
+#projects .text {
+    text-align: center;
+    width: 100%;
+    max-width: 1342px;
+    padding: 19px 0px 25px;
+}
+
+#projects .slide-img {
+    width: 100%;
+    max-width: 307px;
+    height: 307px;
+    object-fit: cover;
+    transition: .5s;
+}
+
+#projects .swiper-button-next,
+#projects .swiper-button-prev {
+    display: none;
+}
+
+#projects .sm-text {
+    text-align: center;
+    margin-top: 14px;
+}
+
+#projects .slide-info {
+    text-align: center;
+}
+
+#projects .projects-info {
+    overflow: hidden;
+}
+
+#projects .swiper-container {
+    padding: 57px 0 0px;
+    overflow: hidden;
+    min-height: 484px;
+    position: relative;
+}
+
+#projects .swiper-slide-active .slide-info .slide-img {
+    transform: scale(1.2);
+    margin-bottom: 40px;
+    transition: .5s;
+}
+
+
+/* ==============================  Work-CSS ==================================== */
+
+#work {
+    background-color: rgb(97 132 216 / 90%);
+    padding: 60px 0px 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+#work .w-span {
+    color: #23CE6B;
+}
+
+#work .heading {
+    width: 100%;
+    max-width: 278px;
+    padding: 0px 0px 48px;
+}
+
+#work .p-text {
+    color: #FFFFFF;
+    font-size: 21px;
+    font-weight: 400;
+    width: 100%;
+    max-width: 663px;
+}
+
+#work .p2 {
+    padding: 34px 0px 28px;
+}
+
+#work .w-content {
+    padding-right: 50px;
+}
+
+#work .work-info {
+    padding: 39px 0px 0px;
+}
+
+#work .w-content1 {
+    padding: 53px 0px 0px;
+}
+
+#work .work-img1 {
+    position: absolute;
+    right: 0;
+    top: 52px;
+}
+
+#work .p3 {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    max-width: 125px;
+    text-overflow: ellipsis;
+}
+
+
+/* ==============================  Service-CSS ==================================== */
+
+#service {
+    padding: 48px 0px 10px;
+}
+
+#service .heading {
+    color: #08083D;
+    text-align: center;
+    padding: 0px 0px 70px;
+}
+
+#service .card-img-top {
+    border-top-left-radius: initial;
+    border-top-right-radius: initial;
+    max-width: 220px;
+    min-height: 220px;
+    margin: auto;
+}
+
+#service .card {
+    border: initial;
+    text-align: center;
+    padding: 0px 0px 50px;
+    width: 100%;
+    max-width: 367px;
+}
+
+#service .service-content p {
+    width: 100%;
+    max-width: 458px;
+    margin: auto;
+    font-size: 20px;
+    font-weight: 400;
+    color: #08083D;
+}
+
+#service .card-deck {
+    padding: 98px 0px 0px;
+}
+
+#service .card-bind {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#service .card-title {
+    font-size: 27px;
+    color: #08083D;
+    font-weight: 700;
+}
+
+#service .card-body {
+    padding: 25px 15px;
+}
+
+
+/* ==============================  Step-CSS ==================================== */
+
+#step {
+    background: transparent linear-gradient(51deg, #6184D8 0%, #08083D 100%) 0% 0% no-repeat padding-box;
+    padding: 55px 0px 45px;
+}
+
+#step .heading {
+    text-align: center;
+    padding: 0px 0px 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    max-width: 537px;
+    text-overflow: ellipsis;
+    margin: auto;
+}
+
+#step .h3-txt {
+    display: none;
+}
+
+#step .step-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+#step .step-content {
+    width: 100%;
+    max-width: 937px;
+    margin: auto;
+    padding: 102px 0px;
+}
+
+#step .step.shape {
+    display: flex;
+    align-items: center;
+    height: 115px;
+    width: 100%;
+    max-width: 115px;
+    border-radius: 50%;
+    background: transparent linear-gradient(328deg, #4D80FB 0%, #23CE6B 100%) 0% 0% no-repeat padding-box;
+}
+
+#step .step-img {
+    margin: auto;
+    height: 53px;
+    width: 100%;
+    max-width: 53px;
+    object-fit: contain;
+}
+
+#step .step-txt {
+    font-size: 27px;
+    color: #23CE6B;
+}
+
+#step .step-data h5 {
+    font-family: 'Gilroy';
+    color: #FFFFFF;
+    font-size: 45px;
+    font-weight: 800;
+    padding: 0px 0px 10px;
+}
+
+#step .step-txt2 {
+    font-size: 21px;
+    color: #fff;
+}
+
+#step .p-next img {
+    width: 100%;
+    max-width: 54px;
+    height: 54px;
+    object-fit: contain;
+    margin: 49px 0px 30px;
+}
+
+#step .step-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 783px;
+    margin: auto;
+    border: 1px solid #ffff;
+    border-radius: 20px;
+    padding: 30px 67px;
+}
+
+#step .sm-text {
+    text-align: center;
+}
+
+#step .step-wrapper::before {
+    content: "";
+    position: absolute;
+    border: 2px solid rgb(97 132 216 / 90%);
+    width: 100%;
+    max-width: 783px;
+    padding: 115px 0px;
+    border-radius: 20px;
+    left: 5px;
+    top: 6px;
+}
+
+
+/* ==============================  Contact-CSS ==================================== */
+
+#contact {
+    background-image: url(../webninteentwenty/assets/images/Group\ 2110.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    max-width: 1920px;
+}
+
+#contact .span-txt {
+    font-family: 'Gilroy';
+    color: #23CE6B;
+    padding: 0px 0px 17px;
+    font-size: 50px;
+    font-weight: 800;
+}
+
+#contact .heading {
+    width: 100%;
+    max-width: 644px;
+    padding: 0px 0px 4px;
+}
+
+#contact .para-txt {
+    font-size: 21px;
+    font-weight: 400;
+    color: #fff;
+    width: 100%;
+    max-width: 708px;
+}
+
+#contact .para2 {
+    padding: 36px 0px 0px;
+}
+
+#contact {
+    padding: 78px 0px 70px;
+}
+
+
+/* ==============================  Stories-CSS ==================================== */
+
+#stories {
+    background-image: url(../webninteentwenty/assets/images/Image\ 89.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    max-width: 1920px;
+    text-align: center;
+    padding: 50px 0px 39px;
+    background-position: center 39%;
+    background-attachment: fixed;
+}
+
+#stories .text {
+    padding: 16px 0px 0px;
+    font-weight: 500;
+}
+
+
+/* ==============================  Portfolio-CSS ==================================== */
+
+#portfolio {
+    overflow: hidden;
+}
+
+#portfolio .card-bind {
+    display: flex;
+}
+
+#portfolio .card {
+    background-color: #23CE6B;
+    padding: 46px 32px;
+    text-align: center;
+    height: 608px;
+    border-radius: initial;
+    width: 100%;
+    max-width: 390px;
+    border: initial;
+}
+
+#portfolio .quote-image {
+    width: 100%;
+    max-width: 55.51px;
+    height: 56px;
+    margin: 23px auto 0px;
+}
+
+#portfolio .card-title {
+    font-size: 27px;
+    color: #ffff;
+    font-weight: 700;
+    padding: 32px 0px 0px;
+    margin: 0;
+}
+
+#portfolio .portfolio-data p {
+    font-size: 21px;
+    font-weight: 400;
+    color: #fff;
+}
+
+#portfolio .quote-text {
+    color: #FFFFFF;
+    font-size: 16px;
+    padding: 38px 0px 0px;
+    font-weight: 500;
+    height: 110px;
+}
+
+#portfolio .modal-content {
+    background-color: initial;
+    border: initial;
+    width: 100%;
+    max-width: 750px;
+}
+
+#portfolio .modal-header {
+    border-bottom: initial;
+    padding: 5px 0px;
+}
+
+#portfolio .modal-video {
+    width: 100%;
+    max-width: 750px;
+    height: 100%;
+    min-height: 500px;
+}
+
+#portfolio .modal-body {
+    padding: 0;
+}
+
+#portfolio .close {
+    color: #ffff;
+    opacity: 1;
+    font-size: 33px;
+    font-weight: 300 !important;
+    text-shadow: initial !important;
+}
+
+#portfolio .modal-dialog {
+    width: 100%;
+    max-width: 750px;
+    height: 100%;
+    min-height: 500px;
+}
+
+#portfolio .modal-img {
+    padding: 34px 0px 0px;
+}
+
+#portfolio .card-body {
+    padding: 18px 15px;
+}
+
+#portfolio .card:nth-child(2) {
+    background-color: #08083D;
+}
+
+#portfolio .card:nth-child(3) {
+    background-color: #6184D8;
+}
+
+#portfolio .card:nth-child(5) {
+    background-color: #6184D8;
+}
+
+
+/* ==============================  Guaranty-CSS ==================================== */
+
+#guaranty {
+    background: transparent linear-gradient(114deg, #6184D8 0%, #08083D 100%) 0% 0% no-repeat padding-box;
+    text-align: center;
+    padding: 59px 20px;
+}
+
+#guaranty .g-para {
+    font-size: 21px;
+    color: #fff;
+    font-weight: 400;
+    width: 100%;
+    max-width: 932px;
+    margin: auto;
+}
+
+#guaranty .g-para.p2 {
+    font-weight: 700;
+}
+
+#guaranty .p1 {
+    padding: 29px 0px;
+}
+
+#guaranty .g-img {
+    width: 100%;
+    max-width: 321px;
+    padding: 30px 0px 40px;
+}
+
+
+/* ==============================  About-CSS ==================================== */
+
+#about .heading {
+    color: #08083D;
+}
+
+#about .text {
+    color: #08083D;
+    font-weight: 500;
+}
+
+#about {
+    padding: 116px 0px 100px;
+    overflow: hidden;
+}
+
+#about .about-img {
+    width: 100%;
+    max-width: 571px;
+}
+
+#about .content-1 {
+    margin-left: 60px;
+}
+
+
+/* ==============================  About-CSS ==================================== */
+
+#guaranty .light-txt {
+    font-family: 'Gilroy';
+    font-size: 16px;
+    font-weight: 300;
+    color: #fff;
+}
+
+
+/* ==============================  footer-CSS ==================================== */
+
+#footer .light-txt {
+    font-family: 'Gilroy';
+    font-size: 16px;
+    font-weight: 300;
+    color: #ffff;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 8px;
+}
+
+#footer .bold-txt {
+    font-family: 'Gilroy';
+    font-size: 16px;
+    color: #fff;
+    font-weight: 800;
+}
+
+#footer {
+    background-image: url(../webninteentwenty/assets/images/Group\ 2176.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 59px 0px 20px;
+}
+
+#footer .d-flex {
+    justify-content: flex-end;
+}
+
+#footer .bold-txt {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 24px;
+}
+
+#footer .icon {
+    margin-left: 15px;
+}
+
+#footer .content {
+    margin-right: 290px;
+}
+
+#footer .list-info {
+    font-family: 'Gilroy';
+    font-size: 16px;
+    font-weight: 300;
+    color: #fff;
+    margin-left: 114px;
+}
+
+#footer .group {
+    padding: 41px 0px 20px;
+}
+
+#footer .f-img {
+    margin-left: 14px;
+}
+
+#footer .content1 p {
+    display: flex;
+}
+
+
+/* =============================================================
+                Media Queries Start
+================================================================*/
+
+@media (max-width: 1500px) {
+    #work .work-info {
+        flex-direction: column;
+    }
+    #work .w-content1 {
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+    #work {
+        padding: 60px 0px 195px;
+    }
+    #work .w-content {
+        display: flex;
+        flex-direction: column;
+    }
+    #portfolio .card-bind {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    #portfolio .card {
+        max-width: initial;
+    }
+}
+
+@media (max-width: 1400px) {
+    #banner .label-img {
+        max-width: 550px;
+    }
+}
+
+@media (max-width: 1200px) {
+    #banner .header-info {
+        flex-direction: column;
+        padding: 168px 0px 130px;
+    }
+    #banner .heading {
+        text-align: center;
+    }
+    #banner .span-design {
+        margin: 10px auto;
+    }
+    #banner .span1-design {
+        margin: 10px auto;
+    }
+    #banner .span2-design {
+        margin: 10px auto;
+    }
+    #banner .span3-design {
+        margin: 10px auto;
+    }
+    #banner .text {
+        text-align: center;
+        margin: auto;
+        padding: 27px 15px 0px;
+    }
+    #banner .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-right: initial;
+    }
+    #banner .label-img {
+        padding: 165px 0px 0px;
+    }
+    #banner .button-style {
+        top: 72px;
+        margin: auto;
+        position: relative;
+    }
+    #banner .button-style:hover {
+        margin-top: initial;
+    }
+    #banner .tap-heading {
+        width: 100%;
+        text-align: center;
+        margin: auto;
+    }
+    #about .d-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+    #about .content-1 {
+        margin-left: initial;
+        padding: 51px 0px 0px;
+        text-align: center;
+    }
+    #about {
+        padding: 80px 0px;
+    }
+    #projects .swiper-button-next,
+    #projects .swiper-button-prev {
+        display: block;
+    }
+    #projects .swiper-button-next:after,
+    #projects .swiper-button-prev:after {
+        font-size: 15px;
+        color: #fff;
+    }
+    #projects .swiper-button-next,
+    #projects .swiper-button-prev {
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        background-color: #6184D8;
+        padding: 4px 11px;
+        top: 42%;
+    }
+    #footer .group {
+        justify-content: space-between;
+    }
+    #footer .list-info {
+        margin-left: initial;
+    }
+}
+
+@media (max-width: 992px) {
+    /* header */
+    #header ul {
+        overflow-y: auto;
+        height: calc(100% - 71px);
+        align-items: center;
+        flex-direction: column;
+    }
+    #header .collapse.show {
+        transform: translateX(0);
+    }
+    #header .navbar-collapse {
+        display: block;
+        transform: translateX(-999%);
+        transition: 0.5s;
+        max-width: 300px;
+        position: fixed;
+        background-color: #08083d !important;
+        top: 0;
+        margin: 71px 0px 15px;
+        max-width: 266px;
+        height: 100%;
+    }
+    #header .nav-design {
+        position: fixed;
+        top: 0;
+        overflow: auto;
+        z-index: 9999999;
+        background-color: #08083d !important;
+        padding: 14px 0px;
+    }
+    #header .ul {
+        overflow-y: auto;
+        height: calc(100% - 71px);
+    }
+    #header li {
+        padding: 20px 40px;
+    }
+    #header .navbar-brand {
+        padding: 5px 0px 0px;
+        margin: auto;
+    }
+    #header .container {
+        padding-left: initial;
+        padding-right: initial;
+        max-width: initial !important;
+    }
+    #banner .button-style {
+        top: 55px;
+        margin: auto;
+    }
+    #portfolio .modal-content {
+        max-width: 521px;
+        margin: auto;
+    }
+    #footer .group1 {
+        display: none !important;
+    }
+    #footer .group {
+        padding: 0;
+        flex-direction: column;
+        align-items: center;
+    }
+    #footer {
+        padding: 20px 0px 0px;
+    }
+    #footer .list-info {
+        margin-bottom: initial;
+    }
+    #footer .list-info {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .heading {
+        font-size: 32px
+    }
+    .sm-text {
+        font-size: 16px;
+    }
+    #banner .label-img {
+        display: none;
+    }
+    #banner .button-style {
+        top: 38px;
+        padding: 10px 31px;
+        font-size: 18px;
+    }
+    #header .label1-img {
+        display: block;
+        padding: 142px 15px 0px;
+        width: 100%;
+    }
+    #banner .heading {
+        font-size: 32px;
+    }
+    #banner .span-design {
+        font-size: 34px;
+    }
+    #header .text {
+        font-size: 18px;
+    }
+    #header .span-arrow {
+        height: 15px;
+        width: 16px;
+    }
+    #banner .tap-heading {
+        width: 100%;
+        max-width: 230px;
+        margin: auto;
+        text-align: center;
+    }
+    #banner .span1-design {
+        font-size: 34px;
+        margin: 10px auto;
+    }
+    #banner .span2-design {
+        font-size: 34px;
+    }
+    #banner .span3-design {
+        font-size: 30px;
+    }
+    #banner .header-info {
+        padding: 116px 0px 80px;
+    }
+    #banner .span2-design {
+        margin: 10px auto;
+    }
+    #banner .span3-design {
+        margin: 10px auto;
+        padding: 4px 5px;
+    }
+    /* dolor1 */
+    #dolor .heading {
+        width: 100%;
+        color: #ffff;
+        font-family: 'Gilroy';
+        font-weight: 800;
+        font-size: 32px;
+        max-width: 178px;
+        margin: auto;
+    }
+    #dolor .text {
+        font-size: 18px;
+        color: #fff;
+        font-weight: 500;
+    }
+    #dolor {
+        background-image: url(../webninteentwenty/assets/images/Mask\ Group\ 877.png);
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-top: -2px;
+    }
+    #projects .heading {
+        font-size: 30px;
+    }
+    #projects .text {
+        font-size: 16px;
+    }
+    #work .w-content1 {
+        display: none;
+    }
+    #work {
+        padding: 60px 0px 80px;
+    }
+    #work .w-content {
+        padding-right: initial;
+    }
+    #work .heading {
+        margin: auto;
+        text-align: center;
+        size: 32px;
+        font-family: 'Gilroy';
+        font-weight: 800;
+    }
+    #work .p-text {
+        font-size: 16px;
+    }
+    #work .p3 {
+        max-width: 96px;
+    }
+    #service .card-img-top {
+        max-width: 218px;
+        height: 199px;
+    }
+    #service .card-title {
+        font-size: 20px;
+    }
+    #service .card-text {
+        font-size: 16px;
+    }
+    #step .heading {
+        overflow: initial;
+        white-space: initial;
+        text-overflow: initial;
+        width: 100%;
+        max-width: 230px;
+        margin: auto;
+        padding: 0px 0px 5px;
+    }
+    #service .card {
+        padding: 0px 0px 18px;
+    }
+    #step .step-box {
+        flex-direction: column-reverse;
+    }
+    #step .step-data h5 {
+        font-size: 28px;
+    }
+    #step .step-txt2 {
+        font-size: 16px;
+    }
+    #step .step.shape {
+        max-width: 57px;
+        height: 57px;
+    }
+    #step .step-img {
+        height: 30px;
+        max-width: 30px;
+    }
+    #step .step-txt {
+        font-size: 20px;
+        padding: 14px 0px 0px;
+    }
+    #step .p-next img {
+        height: 20px;
+        max-width: 20px;
+        margin: 39px 0px 13px;
+    }
+    #step .p-next {
+        text-align: center;
+    }
+    #step .step-content {
+        padding: 0px 0px 60px;
+    }
+    #step .span-txt {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: initial;
+        width: 100%;
+        max-width: 93px;
+        margin: auto;
+    }
+    #step .h3-txt {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        width: 100%;
+        max-width: 153px;
+        display: block;
+        padding: 0px 0px 17px;
+    }
+    #step .span-txt {
+        display: none;
+    }
+    #step .sm-text {
+        width: 100%;
+        max-width: 377px;
+        margin: auto;
+    }
+    #step .step-wrapper::before {
+        padding: 117px 0px;
+        left: 5px;
+        top: 6px;
+    }
+    #step .sm-text {
+        max-width: 295px;
+    }
+    #contact .span-txt {
+        text-align: center;
+        font-size: 32px;
+    }
+    #contact .heading {
+        width: 100%;
+        max-width: 282px;
+        margin: auto;
+        text-align: center;
+    }
+    #contact .button-style {
+        padding: 10px 31px;
+        font-size: 18px;
+        margin-top: 36px;
+    }
+    #contact .para-txt {
+        font-size: 16px;
+        text-align: center;
+    }
+    #contact {
+        text-align: center;
+    }
+    #stories {
+        background-image: initial;
+        background-color: rgb(8 8 61 / 60%);
+    }
+    #stories .text {
+        font-size: 18px;
+    }
+    #portfolio .card-title {
+        font-size: 20px;
+        padding: 16px 0px 0px;
+    }
+    #portfolio .card-text {
+        font-size: 16px;
+    }
+    #portfolio .card {
+        padding: 10px 0px;
+    }
+    #portfolio .modal-img {
+        padding: 9px 0px 0px;
+    }
+    #portfolio .card {
+        height: 414px;
+    }
+    #portfolio .quote-image {
+        max-width: 32px;
+        height: 27px;
+    }
+    #portfolio .quote-text {
+        font-size: 14px;
+        padding: 20px 0px 0px;
+    }
+    #guaranty .g-img {
+        max-width: 189px;
+    }
+    #guaranty .g-para {
+        font-size: 16px;
+    }
+    #guaranty .button-style {
+        padding: 10px 31px;
+        font-size: 18px;
+        margin-top: 36px;
+    }
+}
+
+@media (max-width: 576px) {
+    /* header */
+    #header li {
+        padding: 20px 15px;
+    }
+    #header a {
+        font-size: 15px;
+    }
+    #banner .btn-design {
+        padding: 10px 34px;
+    }
+    /* dolor */
+    #dolor1 {
+        display: block;
+    }
+    #dolor .check-img {
+        margin-right: 13px;
+    }
+    #dolor .check-img {
+        width: 19px;
+    }
+    #dolor .dolor-info {
+        padding: 41px 0px 0px;
+    }
+    #projects .swiper-container {
+        min-height: 305px;
+        padding: 16px 0px 0px;
+    }
+    #projects .slide-img {
+        max-width: 256px;
+        height: 179px;
+    }
+    #projects .sm-text {
+        margin-top: -9px
+    }
+    #projects .swiper-button-prev,
+    #projects .swiper-rtl .swiper-button-next {
+        left: 2px;
+    }
+    #projects .swiper-button-next,
+    #projects .swiper-rtl .swiper-button-prev {
+        right: 1px;
+        left: auto;
+    }
+    #projects .swiper-button-next,
+    #projects .swiper-button-prev {
+        top: 37%;
+    }
+    #step .step-wrapper {
+        padding: 30px 0px;
+    }
+    #portfolio .hide-span {
+        display: none;
+    }
+    #portfolio .modal-content {
+        max-width: 257px;
+    }
+    #portfolio .modal-video {
+        min-height: 391px;
+    }
+    #about .text {
+        width: 100%;
+        max-width: 303px;
+        padding: 0px 0px 15px;
+        margin: auto;
+    }
+    #about .button-style {
+        padding: 10px 31px;
+        font-size: 18px;
+        margin-top: 36px;
+    }
+    #about .about-img {
+        display: none;
+    }
+    #about {
+        padding: 4px 0px 50px;
+    }
+    #footer .list-info {
+        font-size: 14px;
+        text-align: center;
+    }
+}
